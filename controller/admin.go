@@ -19,3 +19,9 @@ func AdminAuthAPI(next echo.HandlerFunc) echo.HandlerFunc {
 		return next(c)
 	}
 }
+
+// AdminLogin 관리자 로그인 페이지
+func AdminLogin(c echo.Context) error {
+	// 미완
+	return c.Render(http.StatusOK, "", nil)
+}

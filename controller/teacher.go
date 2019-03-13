@@ -7,7 +7,7 @@ import (
 	"github.com/labstack/echo"
 )
 
-// TeacherAuthAPI 관리자 로그인 여부 확인
+// TeacherAuthAPI 교사 로그인 여부 확인
 func TeacherAuthAPI(next echo.HandlerFunc) echo.HandlerFunc {
 	return func(c echo.Context) error {
 		session := session.Default(c)
@@ -16,4 +16,9 @@ func TeacherAuthAPI(next echo.HandlerFunc) echo.HandlerFunc {
 		}
 		return next(c)
 	}
+}
+
+// TeacherLogin 교사 로그인 페이지
+func TeacherLogin(c echo.Context) error {
+	return c.Render(http.StatusOK, "teacherLogin", nil)
 }

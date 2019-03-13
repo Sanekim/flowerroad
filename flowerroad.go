@@ -62,12 +62,16 @@ func main() {
 
 	// ================ 교사 페이지 ===================
 
+	e.GET("/teacher", controller.TeacherLogin)
+
 	tc := e.Group("/teacher")
 	tc.Use(controller.TeacherAuthAPI)
 
 	// ================ 교사 API =====================
 
 	// ================ 관리자 페이지 =================
+
+	e.GET("/admin/login", controller.AdminLogin)
 
 	a := e.Group("/admin")
 	a.Use(controller.AdminAuthAPI)
