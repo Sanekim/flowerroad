@@ -21,7 +21,7 @@ func (t *Template) Render(w io.Writer, name string, data interface{}, c echo.Con
 
 func main() {
 	t := &Template{
-		templates: template.Must(template.New("").Delims("[[", "]]").ParseGlob("view/*/*.html")),
+		templates: template.Must(template.New("").Delims("[[", "]]").ParseFiles()),
 	}
 
 	e := echo.New()
@@ -43,7 +43,6 @@ func main() {
 	e.Static("/assets", "static")
 
 	// ================ 학생 페이지 ===================
-
 	// ================ 학생 API ======================
 
 	// ================ 교사 페이지 ===================
