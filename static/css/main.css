@@ -1,0 +1,152 @@
+@font-face{ font-family: 'MSugiJeong'; src:url("/assets/font/MSugiJeong.TTF")}
+header{
+    text-align: center;
+    height: 420px; 
+    font-family: 'MSugiJeong';
+}
+.headerdivT{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    height: 75px;
+    width: 180px
+}
+
+.up-navbar{
+    height: 60px; 
+    background-color: #ECECEC; 
+    width: 100%; 
+    text-align: right;
+}
+
+.up-navbar-span{
+    margin : 10px;
+}
+
+.up-navbar-button{
+    font-size: 1.5em;
+    background-color: #ECECEC;
+    height: 1.5em;
+    border: none;
+    margin-top: 0.5em; 
+    line-height: 1.07em;
+    border-radius: 1.2em 1.2em 1.2em 1.2em;
+    text-align: center;     
+    font-family: 'MSugiJeong';
+}
+
+.hr1{
+    margin-bottom: 0.5em;
+}
+    
+.hr2{
+    margin-top: 0.5em;
+    margin-bottom: 0em;
+    border :1px solid #7B52AB;
+}
+            
+.footerS{
+    text-align: center; 
+    font-size: 20px;
+    font-family: 'Sitka Banner'; 
+    opacity: 0.3; 
+    height: 27px; 
+    margin-top: 754px
+}
+
+.helpdiv{
+    position: absolute; 
+    left: 11%; 
+    transform: translate(-50%, -50%); 
+    font-family: 'MSugiJeong'; 
+    font-weight: 800;
+    font-size: 1.8rem;
+    color: #230947;
+    width: 200px;
+    text-align: center
+}
+.roadmaptext{
+    position: absolute;
+    top: 36%;
+    left: 11%;
+    transform: translate(-50%, -50%);
+    font-family: 'MSugiJeong';
+    font-weight: 800;
+    font-size: 1.8rem;
+    color: #230947;
+    width: 200px;
+    text-align: center
+}
+
+.helpaskdiv{
+    position: absolute;
+    left: 14%;
+    transform: translate(-50%, -50%);
+    font-family: 'MSugiJeong';
+    font-weight: 900;
+    height: 180px;
+    width: 300px;
+    border: 1px solid #707070;
+    border-radius: 3px;
+    font-size: 0.9rem
+}
+
+.helpaskdivdown{
+    position: absolute;
+    left: 14%;
+    transform: translate(-50%, -50%);
+    font-family: 'MSugiJeong';
+    font-weight: 700;
+    font-size: 15px;
+    height: 20px;
+    width: 303px;
+    text-align: right;
+    border-radius: 3px;
+    z-index:2;
+    color: white
+}
+
+.roadmaptextT{
+    position: absolute;
+    top: 36%;
+    left: 11%;
+    transform: translate(-50%, -50%);
+    font-family: 'MSugiJeong';
+    font-weight: 800;
+    font-size: 1.8rem;
+    color: #230947;
+    width: 200px;
+    text-align: left
+}
+
+input[id="cb1"] + label {
+display: inline-block;
+width: 30px;
+height: 30px;
+border: 2px solid #bcbcbc;
+cursor: pointer;
+}
+
+input[id="cb1"]:checked + label {
+    background-color: #9768D1;
+}
+
+input[id="cb1"] {
+display: none;
+}
+
+.cb{
+    font-family: 'MSugiJeong';
+    font-size: 25px
+}
+.footerT{
+    text-align: center; 
+    font-size: 20px;
+    font-family: 'Sitka Banner'; 
+    opacity: 0.3; 
+    height: 27px; 
+    margin-top: 400px
+}
+
+*:focus {
+    outline: none;
+}
