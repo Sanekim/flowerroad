@@ -1,6 +1,7 @@
 package main
 
 import (
+	"FlowerRoad/controller"
 	"html/template"
 	"io"
 
@@ -25,11 +26,11 @@ func main() {
 			//관리자용
 
 			// 공용
-			"view/login.html",
+			"view/publicIndex.html",
 			// 교사용
-			"view/teacher/login.html", "view/teacher/mainpage.html",
+			"view/teacher/login.html",
 			// 학생용
-			"view/view/login.html", "view/view/mainpage.html",
+			"view/view/login.html", "view/view/index.html",
 		)),
 	}
 
@@ -51,14 +52,29 @@ func main() {
 	// Set static serve files
 	e.Static("/assets", "static")
 
+	e.GET("/publicIndex", controller.PublicIndex)
+
 	// ================ 학생 페이지 ===================
+	e.GET("/login", controller.Login)
+	e.GET("/", controller.Index, controller.AuthAPI)
+
 	// ================ 학생 API ======================
 
 	// ================ 교사 페이지 ===================
 
+	e.GET("/teacher", controller.TeacherLogin)
+
+	tc := e.Group("/teacher")
+	tc.Use(controller.TeacherAuthAPI)
+
 	// ================ 교사 API =====================
 
 	// ================ 관리자 페이지 =================
+
+	e.GET("/admin/login", controller.AdminLogin)
+
+	a := e.Group("/admin")
+	a.Use(controller.AdminAuthAPI)
 
 	// ================ 관리자 API ===================
 

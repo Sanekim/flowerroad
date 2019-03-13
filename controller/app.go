@@ -19,3 +19,18 @@ func AuthAPI(next echo.HandlerFunc) echo.HandlerFunc {
 		return next(c)
 	}
 }
+
+// PublicIndex 공용 메인 페이지
+func PublicIndex(c echo.Context) error {
+	return c.Render(http.StatusOK, "publicIndex", nil)
+}
+
+// Index 학생 메인 페이지
+func Index(c echo.Context) error {
+	return c.Render(http.StatusOK, "index", nil)
+}
+
+// Login 학생 로그인 페이지
+func Login(c echo.Context) error {
+	return c.Render(http.StatusOK, "login", nil)
+}
