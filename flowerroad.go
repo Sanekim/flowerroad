@@ -4,7 +4,7 @@ import (
 	"html/template"
 	"io"
 
-	"github.com/ipfans/echo-session"
+	session "github.com/ipfans/echo-session"
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
 )
