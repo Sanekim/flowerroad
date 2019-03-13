@@ -9,7 +9,7 @@ import (
 	"github.com/labstack/echo/middleware"
 )
 
-// Template 개새끼
+// Template 템플릿
 type Template struct {
 	templates *template.Template
 }
