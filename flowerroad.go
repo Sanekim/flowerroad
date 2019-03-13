@@ -4,7 +4,7 @@ import (
 	"html/template"
 	"io"
 
-	"github.com/ipfans/echo-session"
+	session "github.com/ipfans/echo-session"
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
 )
@@ -21,7 +21,16 @@ func (t *Template) Render(w io.Writer, name string, data interface{}, c echo.Con
 
 func main() {
 	t := &Template{
-		templates: template.Must(template.New("").Delims("[[", "]]").ParseFiles()),
+		templates: template.Must(template.New("").Delims("[[", "]]").ParseFiles(
+			//관리자용
+
+			// 공용
+			"view/login.html",
+			// 교사용
+			"view/teacher/login.html", "view/teacher/mainpage.html",
+			// 학생용
+			"view/view/login.html", "view/view/mainpage.html",
+		)),
 	}
 
 	e := echo.New()
