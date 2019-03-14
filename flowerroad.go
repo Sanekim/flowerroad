@@ -1,15 +1,16 @@
 package main
 
 import (
+	"FlowerRoad/controller"
 	"html/template"
 	"io"
 
-	"github.com/ipfans/echo-session"
+	session "github.com/ipfans/echo-session"
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
 )
 
-// Template 개새끼
+// Template 템플릿
 type Template struct {
 	templates *template.Template
 }
@@ -21,7 +22,16 @@ func (t *Template) Render(w io.Writer, name string, data interface{}, c echo.Con
 
 func main() {
 	t := &Template{
-		templates: template.Must(template.New("").Delims("[[", "]]").ParseFiles()),
+		templates: template.Must(template.New("").Delims("[[", "]]").ParseFiles(
+			//관리자용
+
+			// 공용
+			"view/publicIndex.html",
+			// 교사용
+			"view/teacher/login.html",
+			// 학생용
+			"view/view/login.html", "view/view/index.html",
+		)),
 	}
 
 	e := echo.New()
@@ -42,14 +52,29 @@ func main() {
 	// Set static serve files
 	e.Static("/assets", "static")
 
+	e.GET("/publicIndex", controller.PublicIndex)
+
 	// ================ 학생 페이지 ===================
+	e.GET("/login", controller.Login)
+	e.GET("/", controller.Index, controller.AuthAPI)
+
 	// ================ 학생 API ======================
 
 	// ================ 교사 페이지 ===================
 
+	e.GET("/teacher", controller.TeacherLogin)
+
+	tc := e.Group("/teacher")
+	tc.Use(controller.TeacherAuthAPI)
+
 	// ================ 교사 API =====================
 
 	// ================ 관리자 페이지 =================
+
+	e.GET("/admin/login", controller.AdminLogin)
+
+	a := e.Group("/admin")
+	a.Use(controller.AdminAuthAPI)
 
 	// ================ 관리자 API ===================
 

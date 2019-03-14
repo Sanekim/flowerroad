@@ -1,0 +1,43 @@
+[[define "teacherLogin"]]
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>꽃길(교직원용)</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="/assets/css/loginstyle.css">
+    </head>
+    <body class="Abody">
+        <div class="maindivA">
+                <span>
+                    <h5 class="usertypeA">(교사용)</h5>
+                </span>
+            <h1 class="titleA" style=" left: 46%; color: rgba(130, 74, 163, 0.986)"><b>꽃</b></h1><h1 class="titleA" style="left: 54%; color: gray"><b>길</b></h1>
+            <form action="" method="post">
+                <image name="접속" id="loginbuttonA" src="./assets/img/loginbutton.png">
+                <input class="put" style="margin-top:-10%;" type="text" name="login_id" placeholder="&nbsp; 학번">
+                <input class="put" style="margin-top:-3%;" type="password" name="login_pw" placeholder="&nbsp; 비밀번호">
+            </form>
+            <div class="btndiv">
+                <button class="movebtn">접속</button>
+            </div>
+            <p class="warning" id="msgT">큰사넷 아이디가 잘못되었습니다.<br>다시 시도해 주세요.</p>
+            <p class="explainA">디플로마를 결정하는 과정은<br>학생들이 꿈을 향해 나아가는 첫걸음입니다.<br>학생들이 진정한 큰사이언으로 한 발짝 더 나아가<br>원하는 일을 이룰 수 있도록<br>선생님들의 많은 가르침을 부탁드립니다.</p>
+            
+        </div>
+        <div class="backdivA"></div>
+        <footer class="footerA">
+            2018 Copyright Team Gilljabi All Right Reserved.
+        </footer>
+
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+            const myParam = urlParams.get('success');
+            if(myParam == 'no'){
+                document.getElementById("msgT").style.display = "";
+            } else {
+                document.getElementById("msgT").style.display = "none";
+            }
+        </script>
+</html>
+[[end]]
