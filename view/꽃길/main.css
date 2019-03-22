@@ -1,0 +1,80 @@
+        header{
+        text-align: center;
+        height: 420px; 
+        font-family: 'MSugiJeong';
+        }
+
+        .up-navbar{
+            height: 60px; 
+            background-color: #ECECEC; 
+            width: 100%; 
+            text-align: right;
+            }
+
+        .up-navbar-span{
+            margin : 10px;
+            }
+
+        .up-navbar-button{
+            font-size: 1.5em;
+            background-color: #ECECEC;
+            height: 1.5em;
+            border: none;
+            margin-top: 0.5em; 
+            line-height: 1.07em;
+            border-radius: 1.2em 1.2em 1.2em 1.2em;
+            text-align: center;     
+            font-family: 'MSugiJeong';
+            }
+
+        .hr1{
+            margin-bottom: 0.5em;
+            }
+
+        .down-navbar-div{
+            border-top: 3px #7B52AB solid;
+            border-bottom: 3px #7B52AB solid;
+            padding-top: 24px;
+            padding-bottom: 24px;
+            height: 70px;
+            font-size: 40px;
+            }
+
+        .down-navbar-span{
+            margin: 3px;
+            font-style: #000000;
+            font-weight: 900;
+            padding: 22px 50px 22px 50px;
+
+            -webkit-text-stroke: 1px #000000;
+            }
+
+        .down-navbar-button{
+            background-color: #FFFFFF;
+            height: 70px;
+            border: lpx solid #000000;
+            width: 300px;
+            font-size: 0.7em;
+            outline: 0;
+            font-family: 'MSugiJeong';
+            border-radius: 30px 30px 30px 30px;
+            text-align: center;
+            
+            }
+
+        @font-face{
+            font-family: 'MSugiJeong';
+            src:url("MSugiJeong.TTF");
+            
+            font-family: 'Sitka Banner';
+            src:url("Sitka Banner.ttc");
+            }
+
+            footer{
+                text-align: center; 
+                font-size: 20px;
+                font-family: 'Sitka Banner'; 
+                opacity: 0.3; 
+                height: 33px; 
+                margin-top: 100px;
+                }

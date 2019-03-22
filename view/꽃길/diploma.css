@@ -1,0 +1,157 @@
+            header{
+                 text-align: center;
+                 height: 420px; 
+                 font-family: 'MSugiJeong';
+                }
+
+            .buttons{
+                font-family: 'MSugiJeong'; 
+                border-radius: 30px 30px 30px 30px; 
+                text-align: center;
+                }
+
+            .up-navbar{
+                height: 60px; 
+                background-color: #ECECEC; 
+                width: 100%; 
+                text-align: right;
+                }
+
+            .up-navbar-span{
+                margin : 10px;
+                }
+
+            .up-navbar-button{
+                font-size: 25px;
+                background-color: #ECECEC;
+                height: 35px;
+                border: none;
+                margin-top: 12px; 
+                line-height: 25px;
+                border-radius: 30px 30px 30px 30px;
+                text-align: center; 
+                font-family: 'MSugiJeong';
+                }
+
+            .hr1{
+                margin-bottom: 66px;
+                }
+
+            .down-navbar-div{
+                border-top: 3px #7B52AB solid;
+                border-bottom: 3px #7B52AB solid;
+                padding-top: 24px;
+                padding-bottom: 24px;
+                height: 70px;
+                font-size: 40px;
+                }
+
+            .down-navbar-span{
+                margin: 10px;
+                color: #000000;
+                font-weight: 900;
+                padding: 22px 90px 22px 90px;
+                }
+
+            .down-navbar-button{
+                background-color: #FFFFFF;
+                height: 80px;
+                border: lpx solid;
+                width: 400px;
+                font-size: 40px;
+                outline: 0;
+                font-family: 'MSugiJeong';
+                border-radius: 30px 30px 30px 30px;
+                text-align: center;
+                
+                }
+
+            .content{
+                width: 100%;
+                height: 1333px; 
+                font-family: 'MSugiJeong';
+                opacity: 1.o;
+                }
+
+            .content-left-div{
+                width: 356px;
+                height: 1096px;
+                float: left; 
+                margin-left: 80px;
+                margin-right: 76px;
+                }
+
+            .content-left-div-up{
+                font-size: 40px;
+                text-align: center;
+                margin-top: 84px;
+                color: #553285;
+                font-weight: 900;
+                }
+
+            .hr2{
+                color: #9768D1;
+                width: 300px;
+                }
+
+            .content-left-div-down-div{
+                border: 1px #707070 solid;
+                height: 1014px; 
+                text-align: center; 
+                text-align: left; 
+                border-radius: 10px 10px 10px 10px; 
+                margin-top: 40px;
+                }
+
+            ul{
+                list-style:none;
+              }
+
+              ul > li{
+                font-size: 35px;
+                color: #553285;
+                margin-top: 31px;
+              }
+
+              li > li{
+                font-size: 25px;
+                color: #707070;
+                margin-top: 50px;
+              }
+
+            .ptop{
+                font-size: 35px;
+                color: #553285;
+                margin-top: 31px;
+                }
+
+            .pdown{
+                font-size: 25px;
+                color: #707070;
+                margin-top: 50px;
+                }
+
+            .content-right{
+                border: 1px #000000 solid;
+                width: 1320px; height: 1096px; 
+                float:left; 
+                margin-top: 84px;
+                border-radius: 10px 10px 10px 10px;
+                }
+
+            footer{
+                text-align: center; 
+                font-size: 20px;
+                font-family: 'Sitka Banner'; 
+                opacity: 0.3; 
+                height: 33px; 
+                margin-top: 100px;
+                }
+
+            @font-face{
+                font-family: 'MSugiJeong';
+                src:url("MSugiJeong.TTF");
+                font-family: 'Sitka Banner';
+                src:url("Sitka Banner.ttc");
+                }
+        

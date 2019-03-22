@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script language="JavaScript">
+                        function change1(obj){
+                            obj.style.background = '#7B52AB';
+                            obj.style.color = '#ECECEC';
+
+                        }
+                         
+                        function change2(obj){
+                            obj.style.background = '#ECECEC';
+                            obj.style.color = '#707070';
+                        }
+                        function change3(obj){
+                            obj.style.background = '#CDB9E7';
+                            obj.style.color = 'aliceblue';
+                        }
+            </script>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./hi.css" type="text/css">
+     </head>
+    <body>
+        <header style="opacity: 1.o;">
+            <!--navigation-->   
+            <div class="up-navbar">
+                    <span class="up-navbar-span"><button  onmouseout="change2(this)" onmouseover="change1(this)" class="up-navbar-button">로드맵 작성</button></span>
+                    <span class="up-navbar-span"><button  onmouseout="change2(this)" onmouseover="change1(this)" class="up-navbar-button">로드맵 확인</button></span>
+                    <span class="up-navbar-span"><button  onmouseout="change2(this)" onmouseover="change1(this)" class="up-navbar-button">디플로마 소개</button></span>
+                    <span class="up-navbar-span"><button  onmouseout="change2(this)" onmouseover="change1(this)" class="up-navbar-button">로드맵</button></span>
+                    <span class="up-navbar-span"><button  onmouseout="change2(this)" onmouseover="change1(this)" class="up-navbar-button">로그인</button></span>
+                
+            </div>
+            <!--logo-->
+            
+            <img style="margin-bottom: 20px; margin-top:0;"src="logo.png" alt="꽃길 로고">
+            <hr class="hr1">
+            <br />
+            <hr class="hr2">
+
+
+        </header>
+        <div style="font-family: 'MSugiJeong'; font-size:25px;">
+            <select name="diploma" class="selectbox">
+                <option value="">계열선택</option>
+                <option value="국제인문">국제인문</option>
+                <option value="경제경영">경제경영</option>
+                <option value="사회과학">사회과학</option>
+                <option value="예술체육">예술체육</option>
+                <option value="자연과학">자연과학</option>
+                <option value="생명과학">생명과학</option>
+                <option value="공학">공학</option>
+                <option value="IT">IT</option>
+            </select>
+
+        
+            <input type="checkbox" id="cb1" >
+            <label for="cb1" class="checkbox1"></label>
+            cnsa
+            <input type="checkbox" id="cb2">
+            <label for="cb2" class="checkbox1"></label>
+            dual
+            <input type="checkbox" id="cb3">
+            <label for="cb3" class="checkbox1"></label>
+            honor
+            <input type="checkbox" id="cb4">
+            <label for="cb4" class="checkbox1"></label>
+            bilingual
+
+            <input type="checkbox" id="cb5">
+            <label for="cb5" class="checkbox1"></label>
+            나만보기
+
+            <input type="checkbox" id="cb6">
+            <label for="cb6" class="checkbox1"></label>
+            상담요청
+            </div>
+            
+            <div class="wrapper">
+                    <form action="demo-form.asp" method="GET">
+                <table class="diploma-table">
+                    <tr>
+                        <th rowspan="3">학기</th>
+                        <th colspan="6">공통선택</th>
+                        <th colspan="3">계열선택</th>
+                        <th colspan="3">과정선택</th>
+                        <th>자유선택</th>
+                    </tr>
+                    
+                    <tr>
+                        <th colspan="2">탐구</th>
+                        <th colspan="2">체육예술</th>
+                        <th colspan="2" rowspan="2">생활'교양</th>
+                        <th rowspan="2">국어</th>
+                        <th rowspan="2">수학</th>
+                        <th rowspan="2">영어</th>
+                        <th rowspan="2">탐구</th>
+                        <th rowspan="2" colspan="3">국어/수학/외국어/과학/사회/예체</th>
+                    </tr>
+                    <tr>
+                        <th>사회</th>
+                        <th>과학</th>
+                        <th>체육</th>
+                        <th>음/미</th>
+                    </tr>
+                    <tr>
+                        <td>1-1</td>
+                        <td><input type="text" list="subject_list" name="subject" class="box">
+                            <datalist id="subject_list">
+                                <option label="수학과" value="수학1" ></option>
+                                <option label="수학과" value="수학2" ></option>
+                                <option label="수학과" value="심화수학" ></option>
+                                <option label="과학기술과" value="정보과학" ></option>
+                                <option label="예술체육과" value="운동과건강" ></option>
+                            </datalist></td>
+                            <td><input type="text" list="subject_list" name="subject" class="box">
+                                <datalist id="subject_list">
+
+                                </datalist></td>
+                            <td><input type="text" list="subject_list" name="subject" class="box">
+                                <datalist id="subject_list">
+
+                                </datalist></td>
+                            <td><input type="text" list="subject_list" name="subject" class="box">
+                                <datalist id="subject_list">
+
+                                </datalist></td>
+                            <td><input type="text" list="subject_list" name="subject" class="box">
+                                <datalist id="subject_list">
+
+                                </datalist></td>
+                            <td><input type="text" list="subject_list" name="subject" class="box">
+                                <datalist id="subject_list">
+  
+                                </datalist></td>
+                            <td><input type="text" list="subject_list" name="subject" class="box">
+                                <datalist id="subject_list">
+
+                                </datalist></td>
+                            <td><input type="text" list="subject_list" name="subject" class="box">
+                                <datalist id="subject_list">
+ 
+                                </datalist></td>
+                            <td><input type="text" list="subject_list" name="subject" class="box">
+                                <datalist id="subject_list">
+ 
+                                </datalist></td>
+                        <td colspan="4"></td>
+
+                    </tr>
+                    <tr>
+                            <td>1-2</td>
+                            <td><input type="text" list="subject_list" name="subject" class="box">
+                                <datalist id="subject_list">
+                             
+                                </datalist></td>
+                                <td><input type="text" list="subject_list" name="subject" class="box">
+                                    <datalist id="subject_list">
+                              
+                                    </datalist></td>
+                                <td><input type="text" list="subject_list" name="subject" class="box">
+                                    <datalist id="subject_list">
+            
+                                    </datalist></td>
+                                <td><input type="text" list="subject_list" name="subject" class="box">
+                                    <datalist id="subject_list">
+                   
+                                     </datalist></td>
+                                <td><input type="text" list="subject_list" name="subject" class="box">
+                                    <datalist id="subject_list">
+
+                                    </datalist></td>
+                                <td><input type="text" list="subject_list" name="subject" class="box">
+                                    <datalist id="subject_list">
+  
+                                    </datalist></td>
+                                <td><input type="text" list="subject_list" name="subject" class="box">
+                                    <datalist id="subject_list">
+
+                                    </datalist></td>
+                                <td><input type="text" list="subject_list" name="subject" class="box">
+                                    <datalist id="subject_list">
+
+                                    </datalist></td>
+                                <td><input type="text" list="subject_list" name="subject" class="box">
+                                    <datalist id="subject_list">
+ 
+                                    </datalist></td>
+                            <td colspan="4"></td>
+    
+                        </tr>
+                        <tr>
+                                <td>2-1</td>
+                                <td><input type="text" list="subject_list" name="subject" class="box">
+                                    <datalist id="subject_list">
+                                        <option label="수학과" value="수학1" ></option>
+                                        <option label="수학과" value="수학2" ></option>
+                                        <option label="수학과" value="심화수학" ></option>
+                                        <option label="과학기술과" value="정보과학" ></option>
+                                        <option label="예술체육과" value="운동과건강" ></option>
+                                    </datalist></td>
+                                    <td><input type="text" list="subject_list" name="subject" class="box">
+                                        <datalist id="subject_list">
+        
+                                        </datalist></td>
+                                    <td><input type="text" list="subject_list" name="subject" class="box">
+                                        <datalist id="subject_list">
+        
+                                        </datalist></td>
+                                    <td><input type="text" list="subject_list" name="subject" class="box">
+                                        <datalist id="subject_list">
+        
+                                        </datalist></td>
+                                    <td><input type="text" list="subject_list" name="subject" class="box">
+                                        <datalist id="subject_list">
+        
+                                        </datalist></td>
+                                    <td><input type="text" list="subject_list" name="subject" class="box">
+                                        <datalist id="subject_list">
+          
+                                        </datalist></td>
+                                    <td><input type="text" list="subject_list" name="subject" class="box">
+                                        <datalist id="subject_list">
+        
+                                        </datalist></td>
+                                    <td><input type="text" list="subject_list" name="subject" class="box">
+                                        <datalist id="subject_list">
+         
+                                        </datalist></td>
+                                    <td><input type="text" list="subject_list" name="subject" class="box">
+                                        <datalist id="subject_list">
+         
+                                        </datalist></td>
+                                <td><input type="text" list="subject_list" name="subject" class="box">
+                                    <datalist id="subject_list">
+     
+                                    </datalist></td>
+                                <td ><input type="text" list="subject_list" name="subject" class="box">
+                                    <datalist id="subject_list">
+         
+                                    </datalist></td>
+                                <td ><input type="text" list="subject_list" name="subject" class="box">
+                                    <datalist id="subject_list">
+             
+                                    </datalist></td>
+                                <td ><input type="text" list="subject_list" name="subject" class="box">
+                                    <datalist id="subject_list">
+                 
+                                    </datalist></td>
+        
+                            </tr>
+                            <tr>
+                            <td>2-2</td>
+                            <td><input type="text" list="subject_list" name="subject" class="box">
+                                <datalist id="subject_list">
+                                    <option label="수학과" value="수학1" ></option>
+                                    <option label="수학과" value="수학2" ></option>
+                                    <option label="수학과" value="심화수학" ></option>
+                                    <option label="과학기술과" value="정보과학" ></option>
+                                    <option label="예술체육과" value="운동과건강" ></option>
+                                </datalist></td>
+                                <td><input type="text" list="subject_list" name="subject" class="box">
+                                    <datalist id="subject_list">
+    
+                                    </datalist></td>
+                                <td><input type="text" list="subject_list" name="subject" class="box">
+                                    <datalist id="subject_list">
+    
+                                    </datalist></td>
+                                <td><input type="text" list="subject_list" name="subject" class="box">
+                                    <datalist id="subject_list">
+    
+                                    </datalist></td>
+                                <td><input type="text" list="subject_list" name="subject" class="box">
+                                    <datalist id="subject_list">
+    
+                                    </datalist></td>
+                                <td><input type="text" list="subject_list" name="subject" class="box">
+                                    <datalist id="subject_list">
+      
+                                    </datalist></td>
+                                <td><input type="text" list="subject_list" name="subject" class="box">
+                                    <datalist id="subject_list">
+    
+                                    </datalist></td>
+                                <td><input type="text" list="subject_list" name="subject" class="box">
+                                    <datalist id="subject_list">
+     
+                                    </datalist></td>
+                                <td><input type="text" list="subject_list" name="subject" class="box">
+                                    <datalist id="subject_list">
+     
+                                    </datalist></td>
+                            <td ><input type="text" list="subject_list" name="subject" class="box">
+                                <datalist id="subject_list">
+ 
+                                </datalist></td>
+                            <td ><input type="text" list="subject_list" name="subject" class="box">
+                                <datalist id="subject_list">
+     
+                                </datalist></td>
+                            <td ><input type="text" list="subject_list" name="subject" class="box">
+                                <datalist id="subject_list">
+         
+                                </datalist></td>
+                            <td ><input type="text" list="subject_list" name="subject" class="box">
+                                <datalist id="subject_list">
+             
+                                </datalist></td>
+    
+                        </tr>
+                        
+                        <tr>
+                        <td>3-1</td>
+                        <td colspan="2" style="border:none;"></td>
+                            <td><input type="text" list="subject_list" name="subject" class="box">
+                                <datalist id="subject_list">
+
+                                </datalist></td>
+                            <td><input type="text" list="subject_list" name="subject" class="box">
+                                <datalist id="subject_list">
+
+                                </datalist></td>
+                            <td><input type="text" list="subject_list" name="subject" class="box">
+                                <datalist id="subject_list">
+
+                                </datalist></td>
+                            <td><input type="text" list="subject_list" name="subject" class="box">
+                                <datalist id="subject_list">
+  
+                                </datalist></td>
+                            <td><input type="text" list="subject_list" name="subject" class="box">
+                                <datalist id="subject_list">
+
+                                </datalist></td>
+                            <td><input type="text" list="subject_list" name="subject" class="box">
+                                <datalist id="subject_list">
+ 
+                                </datalist></td>
+                            <td><input type="text" list="subject_list" name="subject" class="box">
+                                <datalist id="subject_list">
+ 
+                                </datalist></td>
+                        <td ><input type="text" list="subject_list" name="subject" class="box">
+                            <datalist id="subject_list">
+
+                            </datalist></td>
+                        <td ><input type="text" list="subject_list" name="subject" class="box">
+                            <datalist id="subject_list">
+ 
+                            </datalist></td>
+                        <td ><input type="text" list="subject_list" name="subject" class="box">
+                            <datalist id="subject_list">
+     
+                            </datalist></td>
+                        <td ><input type="text" list="subject_list" name="subject" class="box">
+                            <datalist id="subject_list">
+         
+                            </datalist></td>
+
+                    </tr>
+                    
+                    <tr>
+                    <td>3-2</td>
+                    <td colspan="2" style="border:none;"></td>
+
+                        <td><input type="text" list="subject_list" name="subject" class="box">
+                            <datalist id="subject_list">
+
+                            </datalist></td>
+                        <td><input type="text" list="subject_list" name="subject" class="box">
+                            <datalist id="subject_list">
+
+                            </datalist></td>
+                        <td><input type="text" list="subject_list" name="subject" class="box">
+                            <datalist id="subject_list">
+
+                            </datalist></td>
+                        <td><input type="text" list="subject_list" name="subject" class="box">
+                            <datalist id="subject_list">
+
+                            </datalist></td>
+                        <td><input type="text" list="subject_list" name="subject" class="box">
+                            <datalist id="subject_list">
+
+                            </datalist></td>
+                        <td><input type="text" list="subject_list" name="subject" class="box">
+                            <datalist id="subject_list">
+
+                            </datalist></td>
+                        <td><input type="text" list="subject_list" name="subject" class="box">
+                            <datalist id="subject_list">
+
+                            </datalist></td>
+                    <td ><input type="text" list="subject_list" name="subject" class="box">
+                        <datalist id="subject_list">
+
+                        </datalist></td>
+                    <td ><input type="text" list="subject_list" name="subject" class="box">
+                        <datalist id="subject_list">
+
+                        </datalist></td>
+                    <td ><input type="text" list="subject_list" name="subject" class="box">
+                        <datalist id="subject_list">
+ 
+                        </datalist></td>
+                    <td ><input type="text" list="subject_list" name="subject" class="box">
+                        <datalist id="subject_list">
+     
+                        </datalist></td>
+
+                </tr>
+               <tr>
+                   <td colspan="11" rowspan="2"></td>
+                   <td style="height: 20px;">과정선택A</td>
+                   <td style="height: 20px;">과정선택B</td>
+                    <td rowspan="2"></td>
+               </tr>
+               <tr>
+                   <td></td>
+                   <td></td>
+
+               </tr>
+               <tr style="height: 20px;">
+                   <td colspan="7"style="height: 20px;">이중언어 과목(4과목 이상 이수)</td>
+                   <td colspan="7"style="height: 20px;"></td>
+               </tr>
+               <tr style="height: 20px;">
+                    <td colspan="7" style="height: 20px;" >고급 과목(3과목 이상 이수)</td>
+                    <td colspan="7" style="height: 20px;"></td>
+               </tr>
+
+
+            
+                </table>
+                </form>
+
+            </div>
+            
+            <input type="button" class="savebutton" value="로드맵 저장" onmouseout="change3(this)" onmouseover="change1(this)" onclick="alert('저장하시겠습니까?')">
+
+
+ 
+        <footer>
+            2018 Copyright Team Gilljabi All Right Reserved.
+        </footer>
+    </body>
+</html>

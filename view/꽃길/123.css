@@ -1,0 +1,47 @@
+.wrapper{
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: calc(100%/3);
+    text-align: center;
+}
+
+.login-wrapper{
+    background-color: #52579B;
+    width: 574px;
+    height: 267px;
+    margin-left: calc(100%/4);
+    border-radius: 0px 40px 0px 40px;
+    
+}
+
+.Login{
+    font-size: 35px;
+    color: white;
+    font-weight: 300;
+    margin-left: 50px;
+    padding-top: 20px;
+    margin-bottom: 15px;
+}
+
+.loginwrapper1{
+    margin-left: 100px;
+    font-size: 20px;
+    height: 130px;
+}
+
+
+
+.loginbutton{
+    float: right;
+
+}
+
+*{
+    font-family: 'NanumGothic';
+}
+
+@font-face{
+
+    font-family: 'NanumGothic';
+    src:url("NanumGothic.TTF");
+}
