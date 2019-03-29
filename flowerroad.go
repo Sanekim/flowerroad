@@ -4,6 +4,7 @@ import (
 	"FlowerRoad/controller"
 	"html/template"
 	"io"
+	"net/http"
 
 	session "github.com/ipfans/echo-session"
 	"github.com/labstack/echo"
@@ -23,12 +24,11 @@ func (t *Template) Render(w io.Writer, name string, data interface{}, c echo.Con
 func main() {
 	t := &Template{
 		templates: template.Must(template.New("").Delims("[[", "]]").ParseFiles(
-			//관리자용
-
+			// 관리자용
 			// 공용
 			"view/publicIndex.html",
 			// 교사용
-			"view/teacher/login.html",
+			"view/login.html",
 			// 학생용
 			"view/view/login.html", "view/view/index.html",
 		)),
@@ -52,29 +52,29 @@ func main() {
 	// Set static serve files
 	e.Static("/assets", "static")
 
-	e.GET("/publicIndex", controller.PublicIndex)
-
+	e.GET("/publicIndex", func(c echo.Context) error {
+		return c.Render(http.StatusOK, "publicIndex", nil)
+	})
 	// ================ 학생 페이지 ===================
+	// 로그인 페이지
 	e.GET("/login", controller.Login)
-	e.GET("/", controller.Index, controller.AuthAPI)
+	e.POST("/login", controller.LoginPost)
 
+	// 로그아웃
+	e.GET("/logout", controller.Logout)
+
+	// 메인 페이지
+	e.GET("/", controller.Index)
 	// ================ 학생 API ======================
 
 	// ================ 교사 페이지 ===================
-
-	e.GET("/teacher", controller.TeacherLogin)
-
-	tc := e.Group("/teacher")
-	tc.Use(controller.TeacherAuthAPI)
+	// 로그인 페이지
+	e.GET("/teacher/login", controller.TeacherLogin)
+	e.POST("/teacher/login", controller.TeacherLoginPost)
 
 	// ================ 교사 API =====================
 
 	// ================ 관리자 페이지 =================
-
-	e.GET("/admin/login", controller.AdminLogin)
-
-	a := e.Group("/admin")
-	a.Use(controller.AdminAuthAPI)
 
 	// ================ 관리자 API ===================
 
