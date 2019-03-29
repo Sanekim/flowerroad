@@ -14,8 +14,8 @@ func AuthAPI(next echo.HandlerFunc) echo.HandlerFunc {
 		session := session.Default(c)
 
 		// 로그인 되어 있지 않을 때
-		if session.Get("studentNumber") != nil {
-			return c.Redirect(http.StatusMovedPermanently, "/login")
+		if session.Get("cnsanetID") != nil {
+			return c.Redirect(http.StatusMovedPermanently, "/publicIndex")
 		}
 		return next(c)
 	}
@@ -41,7 +41,17 @@ func LoginPost(c echo.Context) error {
 
 	session := session.Default(c)
 	session.Set("studentNumber", c.FormValue("studentNumber"))
+	session.Set("name", nameOrErr)
 	session.Save()
 
 	return c.Redirect(http.StatusMovedPermanently, "/")
+}
+
+// Logout 로그아웃
+func Logout(c echo.Context) error {
+	session := session.Default(c)
+	session.Clear()
+	session.Save()
+
+	return c.Redirect(http.StatusMovedPermanently, "/publicIndex")
 }

@@ -11,7 +11,7 @@ import (
 func AdminAuthAPI(next echo.HandlerFunc) echo.HandlerFunc {
 	return func(c echo.Context) error {
 		session := session.Default(c)
-		if session.Get("ID") == nil {
+		if session.Get("LoginID") == nil {
 			return c.Redirect(http.StatusMovedPermanently, "/admin/login")
 		}
 		return next(c)

@@ -1,8 +1,9 @@
 package models
 
 import (
-	"golang.org/x/crypto/bcrypt"
 	"fmt"
+
+	"golang.org/x/crypto/bcrypt"
 
 	"github.com/jinzhu/gorm"
 )
