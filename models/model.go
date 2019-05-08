@@ -11,7 +11,7 @@ import (
 
 const (
 	// SQLConnectionString : MySQL Connection String
-	SQLConnectionString = "*"
+	SQLConnectionString = "root:bamboodb@tcp(db.cnsabamboo.kr:3306)/TESTCB?charset=utf8&parseTime=True"
 	// SALT : SALT
 	SALT = "*"
 )

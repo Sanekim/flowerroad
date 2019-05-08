@@ -1,0 +1,90 @@
+[[define "diploma"]]
+<!DOCTYPE html>
+ <html>
+     <head>
+        <script language="JavaScript">
+                        function change1(obj){
+                            obj.style.background = '#7B52AB';
+                            obj.style.color = '#ECECEC';
+                        }
+                         
+                        function change2(obj){
+                            obj.style.background = '#ECECEC';
+                            obj.style.color = '#707070';
+                        }
+                        function change3(obj){
+                            obj.style.background = '#FFFFFF';
+                            obj.style.color = 'black';
+                        }
+            </script>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./diploma.css" type="text/css">
+     </head>
+     
+     <body style="width: 100%; height: 100%;">
+        <header style="opacity: 1.o;">
+            <!--navigation-->   
+            <div class="up-navbar">
+                
+                    <span class="up-navbar-span"><button  onmouseout="change2(this)" onmouseover="change1(this)" class="up-navbar-button">디플로마 소개</button></span>
+                    <span class="up-navbar-span"><button  onmouseout="change2(this)" onmouseover="change1(this)" class="up-navbar-button">로드맵</button></span>
+                    <span class="up-navbar-span"><button  onmouseout="change2(this)" onmouseover="change1(this)" class="up-navbar-button">로그인</button></span>
+                
+            </div>
+            <!--logo-->
+            <br><br><br>
+            <img style="margin-bottom: 20px;"src="logo.png" alt="꽃길 로고">
+            <hr class="hr1">
+
+
+            <!--nav-->
+            <div class="down-navbar-div">
+                <nav>
+                        <span class="down-navbar-span"><button onmouseout="change3(this)" onmouseover="change1(this)" class="down-navbar-button">로드맵 작성</button></span>
+                        <span class="down-navbar-span"><button onmouseout="change3(this)" onmouseover="change1(this)" class="down-navbar-button">로드맵 확인</button></span>
+                </nav>
+            </div>
+        </header>
+
+
+        <div class="content">
+
+            <!--왼쪽 내비게이션바-->
+            <div class="content-left-div">
+                <div class="content-left-div-up">디플로마 소개</div>
+
+                <hr class="hr2">
+                
+                <!--디플로마 선택 바-->
+                <div class="content-left-div-down-div">
+                    <ul>
+                        <li><p >자연공학</p>
+                                <li><p >자연과학</p></li>
+                                <li><p >공학</p></li>
+                                <li><p >IT</p></li>
+                                <li><p >생명과학</p></li>
+                        </li>
+
+                        <li><p >인문사회</p>
+                                <li><p >국제인문</p></li>
+                                <li><p >사회과학</p></li>
+                                <li><p >경제경영</p></li>
+                        </li>
+
+                        <li><p class="ptop">예술체육</p>
+                                <li><p class="pdown">예술체육</p></li>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--오른쪽 디플로마 설명 창-->
+            <div class="content-right"></div>
+        </div>
+
+        <footer>
+            2018 Copyright Team Gilljabi All Right Reserved.
+        </footer>
+     </body>
+ </html>
+ [[end]]

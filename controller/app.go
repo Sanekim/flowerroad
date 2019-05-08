@@ -45,7 +45,7 @@ func LoginPost(c echo.Context) error {
 	session.Save()
 
 	return c.Redirect(http.StatusMovedPermanently, "/")
-} 
+}
 
 // Logout 로그아웃
 func Logout(c echo.Context) error {
@@ -54,4 +54,9 @@ func Logout(c echo.Context) error {
 	session.Save()
 
 	return c.Redirect(http.StatusMovedPermanently, "/publicIndex")
+}
+
+// PasswordChange 학생 비밀번호 변경 페이지
+func PasswordChange(c echo.Context) error {
+	return c.Render(http.StatusOK, "passwordChange", nil)
 }

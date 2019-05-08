@@ -24,14 +24,12 @@ func (t *Template) Render(w io.Writer, name string, data interface{}, c echo.Con
 func main() {
 	t := &Template{
 		templates: template.Must(template.New("").Delims("[[", "]]").ParseFiles(
-			// 관리자용
-			
 			// 공용
 			"view/publicIndex.html",
 			// 교사용
-			"view/login.html",
+			"view/teacher/login.html",
 			// 학생용
-			"view/view/login.html", "view/view/index.html",
+			"view/view/login.html", "view/view/index.html", "view/view/addRoadmap.html", "view/view/diploma.html", "view/view/passwordChange.html",
 		)),
 	}
 
@@ -57,9 +55,9 @@ func main() {
 	e.GET("/publicIndex", func(c echo.Context) error {
 		return c.Render(http.StatusOK, "publicIndex", nil)
 	})
-
 	// 로그아웃
 	e.GET("/logout", controller.Logout)
+
 	// ================ 학생 페이지 ===================
 	// 로그인 페이지
 	e.GET("/login", controller.Login)
@@ -67,6 +65,19 @@ func main() {
 
 	// 메인 페이지
 	e.GET("/", controller.Index)
+
+	// 비밀번호 변경 페이지
+	e.GET("/passwordChange", controller.PasswordChange)
+
+	// 디플로마 소개 페이지
+	// e.GET("/diploIntro")
+
+	// 계획표 작성 페이지
+	// e.GET("/addRoadmap")
+
+	// 계획표 확인
+	// e.GET("/checkRoadmap")
+
 	// ================ 학생 API ======================
 
 	// ================ 교사 페이지 ===================
