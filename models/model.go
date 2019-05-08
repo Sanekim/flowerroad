@@ -6,6 +6,7 @@ import (
 	"golang.org/x/crypto/bcrypt"
 
 	"github.com/jinzhu/gorm"
+	_ "github.com/jinzhu/gorm/dialects/mysql"
 )
 
 const (
@@ -39,12 +40,12 @@ func Login(studentNumber string, password string) (bool, string) {
 	user := User{}
 	err := db.Table("users").Where("student_number = ?", studentNumber).First(&user).Error
 	if err != nil {
-		return false, "없는 학번입니다"
+		return false, "StudentNumber"
 	}
 
 	err = bcrypt.CompareHashAndPassword([]byte(user.Password), []byte(password+SALT))
 	if err != nil {
-		return false, "비밀번호가 틀렸습니다"
+		return false, "Password"
 	}
 
 	return true, user.Name

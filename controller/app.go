@@ -45,7 +45,7 @@ func LoginPost(c echo.Context) error {
 	session.Save()
 
 	return c.Redirect(http.StatusMovedPermanently, "/")
-}
+} 
 
 // Logout 로그아웃
 func Logout(c echo.Context) error {

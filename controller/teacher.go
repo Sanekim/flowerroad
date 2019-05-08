@@ -39,3 +39,8 @@ func TeacherLoginPost(c echo.Context) error {
 
 	return c.Redirect(http.StatusMovedPermanently, "/teacher/")
 }
+
+// TeacherIndex 교사 메인 페이지
+func TeacherIndex(c echo.Context) error {
+	return c.Render(http.StatusOK, "teacherIndex", nil)
+}

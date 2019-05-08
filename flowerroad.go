@@ -25,6 +25,7 @@ func main() {
 	t := &Template{
 		templates: template.Must(template.New("").Delims("[[", "]]").ParseFiles(
 			// 관리자용
+			
 			// 공용
 			"view/publicIndex.html",
 			// 교사용
@@ -52,16 +53,17 @@ func main() {
 	// Set static serve files
 	e.Static("/assets", "static")
 
+	// 공용 인덱스
 	e.GET("/publicIndex", func(c echo.Context) error {
 		return c.Render(http.StatusOK, "publicIndex", nil)
 	})
+
+	// 로그아웃
+	e.GET("/logout", controller.Logout)
 	// ================ 학생 페이지 ===================
 	// 로그인 페이지
 	e.GET("/login", controller.Login)
 	e.POST("/login", controller.LoginPost)
-
-	// 로그아웃
-	e.GET("/logout", controller.Logout)
 
 	// 메인 페이지
 	e.GET("/", controller.Index)
@@ -72,6 +74,11 @@ func main() {
 	e.GET("/teacher/login", controller.TeacherLogin)
 	e.POST("/teacher/login", controller.TeacherLoginPost)
 
+	tcr := e.Group("/teacher")
+	tcr.Use(controller.TeacherAuthAPI)
+
+	// 메인 페이지
+	tcr.GET("/", controller.TeacherIndex)
 	// ================ 교사 API =====================
 
 	// ================ 관리자 페이지 =================
